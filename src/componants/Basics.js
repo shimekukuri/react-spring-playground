@@ -19,9 +19,12 @@ export default function Basics() {
 
   return (
     <>
-      <button onClick={handlePauseClick}>Pause</button>
-      <animated.div style={props}>I will fade in</animated.div>
-      <hr style={{width: "80%"}}/>
+      <hr style={{ width: "80%" }} />
+      <div style={{display: "flex", flexDirection: "column"}}>
+        <button onClick={handlePauseClick}>Pause</button>
+        <animated.div style={props}>I will fade in</animated.div>
+      </div>
+      <hr style={{ width: "80%" }} />
     </>
   );
 }
