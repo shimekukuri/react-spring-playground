@@ -12,24 +12,73 @@ export default function Paralax() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "blue"
+            backgroundColor: "blue",
           }}
         >
-          <p>test 1</p>
+          <p style={{ fontSize: `100px` }}>Fun With Parallax</p>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={1}
-          speed={2}
-          style={{ backgroundColor: "#ff6d6d" }}
-        />
-        <ParallaxLayer
-          sticky={{start: 1, end: 2}}
+          offset={0.3}
           speed={0.5}
           style={{
             display: "flex",
             justifyContent: "center",
+          }}
+        >
+          {[...Array(5)].map(() => {
+            return (
+              <>
+                <div
+                  style={{
+                    backgroundColor: "orange",
+                    width: `50px`,
+                    height: `50px`,
+                    marginLeft: `${Math.random() * (Math.random() * 50)}%`,
+                    marginTop: `${Math.random() * (Math.random() * 75) * 3}%`,
+                    opacity: `${Math.random() * Math.random()}`,
+                    position: "relative",
+                    zIndex: -1000,
+                  }}
+                ></div>
+              </>
+            );
+          })}
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={0.6}
+          speed={0.5}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          {[...Array(5)].map(() => {
+            return (
+              <>
+                <div
+                  style={{
+                    backgroundColor: "red",
+                    width: `50px`,
+                    height: `50px`,
+                    marginLeft: `${Math.random() * (Math.random() * 50)}%`,
+                    marginTop: `${Math.random() * (Math.random() * 50)}%`,
+                    opacity: `${Math.random()}`,
+                    position: "relative",
+                  }}
+                ></div>
+              </>
+            );
+          })}
+        </ParallaxLayer>
+        <ParallaxLayer
+          sticky={{ start: 1, end: 2 }}
+          speed={5}
+          style={{
+            display: "flex",
+            justifyContent: "start",
             alignItems: "center",
             color: "white",
+            marginLeft: `15%`,
           }}
         >
           <div
@@ -40,11 +89,23 @@ export default function Paralax() {
               borderRadius: 16,
               display: "flex",
               justifyContent: "center",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
-            <p style={{ zIndex: 900 }}>Test 2</p>
+            <p>Test 2</p>
           </div>
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={1}
+          speed={0.5}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginLeft: `10%`
+          }}
+        >
+        <p style={{minWidth: `200px`}}>YOLO SWAG</p>
         </ParallaxLayer>
       </Parallax>
     </>
