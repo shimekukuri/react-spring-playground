@@ -64,6 +64,7 @@ export default function Paralax() {
                     marginTop: `${Math.random() * (Math.random() * 50)}%`,
                     opacity: `${Math.random()}`,
                     position: "relative",
+                    borderRadius: "15px",
                   }}
                 ></div>
               </>
@@ -102,10 +103,22 @@ export default function Paralax() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginLeft: `10%`
+            marginLeft: "50%",
+            backgroundColor: "red",
+            width: `40%`,
           }}
         >
-        <p style={{minWidth: `200px`}}>YOLO SWAG</p>
+          <p style={{margin: "20px"}}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
         </ParallaxLayer>
       </Parallax>
     </>
